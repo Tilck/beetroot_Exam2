@@ -1,0 +1,195 @@
+@mixin hoverEffect{
+  opacity: 0.8;
+  cursor: pointer;
+}
+$mainColorLight: #55b7ff;
+$mainColorDark: #7e5aff;
+$textColor: #2c4058;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  &:focus {
+    outline: none;
+  }
+}
+
+img {display: block}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  font: 18px "GothamBook", sans-serif;
+  color: #fff;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header {
+  background: url("../img/backgrounds/header-bg.png") 50% no-repeat, linear-gradient(45deg, $mainColorLight, $mainColorDark);
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  &__arrow {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: all 1s ease-out;
+    &:hover {
+      transform: scale(1.2);
+      @include hoverEffect;
+    }
+    svg {
+      fill: #fff;
+      margin: 0 auto;
+      width: 14px;
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+  }
+  &__slider {
+    height: 100%;
+    margin-bottom: 0 !important;
+    display: flex !important;
+    align-items: center;
+    .slick-dots {
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      right: 0;
+      width: auto;
+      top: 0;
+      bottom: 0;
+      margin-right: 40px;
+      & li {
+        margin-bottom: 40px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+         button:before {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+.nav-wrapper {
+  width: 80%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+  font-size: 14px;
+  z-index: 1;
+}
+
+.circle {
+  border: 1px solid #fff;
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin-right: 14px;
+}
+
+.social, .menu {
+  display: flex;
+}
+
+.menu {
+  flex-grow: 1;
+  justify-content: space-around;
+  &__elem {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    text-transform: uppercase;
+    &:hover {
+      @include hoverEffect;
+      text-decoration: underline;
+      & .circle {
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+.social {
+  &__elem {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    position: relative;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      @include hoverEffect;
+      &:after {
+        content: attr(data-title);
+        z-index: 1;
+        font-size: 11px;
+        padding: 5px 10px;
+        border: 1px solid #fff;
+        border-radius: 20px;
+        position: absolute;
+        bottom: -30px;
+      }
+    }
+    svg {
+      fill: #fff;
+      margin: 0 auto;
+      width: 20px;
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+  }
+}
+
+.slider {
+  &__elem {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title, &__desc {
+    text-transform: uppercase;
+  }
+  &__title {
+    letter-spacing: 0.05em;
+    font-family: "GothamBold", sans-serif;
+    font-size: 80px;
+  }
+  &__desc {
+    letter-spacing: 0.3em;
+  }
+}
+
+.section {
+  color: $textColor;
+}
