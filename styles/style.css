@@ -153,6 +153,103 @@ body {
   letter-spacing: 0.3em; }
 
 .section {
-  color: #2c4058; }
+  color: #2c4058;
+  padding: 140px 0; }
+  .section__row {
+    margin-top: 160px; }
+  .section__title {
+    font-family: "GothamBold", sans-serif;
+    font-size: 44px;
+    text-transform: uppercase;
+    text-align: center; }
+  .section__col {
+    margin-right: 10%;
+    float: left;
+    width: 45%; }
+    .section__col:last-child {
+      margin-right: 0; }
+    .section__col--reverse {
+      float: right;
+      margin-right: 0;
+      margin-left: 10%; }
+      .section__col--reverse:last-child {
+        margin-left: 0; }
+  .section__desc {
+    font-size: 22px;
+    text-transform: uppercase; }
+  .section__text {
+    font-family: "OpenSans-Regular";
+    color: #4b5562;
+    line-height: 1.6em; }
+  .section__btn {
+    margin: 35px 0; }
+  .section__addressPoint {
+    display: flex;
+    align-items: center;
+    font-family: OpenSans-Italic;
+    line-height: 1.6em; }
+    .section__addressPoint svg {
+      fill: #2c4058;
+      width: 16px;
+      height: 16px; }
+
+.btn {
+  color: #2c4058;
+  padding: 20px 40px;
+  border: 1px solid #2c4058;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "GothamBook";
+  text-transform: uppercase; }
+  .btn:hover {
+    background-color: #2c4058;
+    color: #fff;
+    opacity: 0.7; }
+  .btn:focus {
+    opacity: 0.4; }
+
+.title--underline {
+  position: relative; }
+  .title--underline:before {
+    content: "";
+    width: 100px;
+    border-top: 1px solid #2c4058;
+    height: 1px;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -20px;
+    margin: auto; }
+.title--info {
+  text-align: left; }
+
+.image__item {
+  width: 100%;
+  transition: transform 1s ease-in-out;
+  cursor: pointer; }
+  .image__item--left:hover {
+    transform: translate3d(-25%, -20%, 0px); }
+  .image__item--right:hover {
+    transform: translate3d(25%, -20%, 0px); }
+.image__wrap {
+  position: relative; }
+.image__shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -20%;
+  z-index: -1; }
+  .image__shadow--left {
+    left: -25%;
+    background-color: #55b7ff; }
+  .image__shadow--right {
+    right: -25%;
+    background-color: #7e5aff; }
+
+.latestNews {
+  background: url("../img/backgrounds/latestNews.png") 50% no-repeat, linear-gradient(45deg, #7e5aff, #55b7ff);
+  background-size: cover; }
 
 /*# sourceMappingURL=style.css.map */
