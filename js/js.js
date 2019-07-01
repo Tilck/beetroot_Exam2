@@ -9,8 +9,8 @@ $(document).ready(function(){
         autoplay: true,
         autoplaySpeed: 2000,
         arrows: false,
-        vertical: true,
-        verticalSwiping: true
+        // vertical: true,
+        // verticalSwiping: true
     });
     $('.news__slider').slick({
         infinite: true,
@@ -91,10 +91,10 @@ var headerSlideElem = document.querySelectorAll('.slider__elem');
 var header = document.querySelector('.header');
 
 for (var i = 0; i <= headerSlideElem.length; i++) {
+    header.setAttribute("data-forLoader", i);
     $(headerSlideElem[i]).css({
         background: "url(img/backgrounds/header-bg.png) 50% no-repeat, linear-gradient(45deg, " + getRandomColor() + "," + getRandomColor() + ")"
     });
-    console.log(header);
 }
 
 

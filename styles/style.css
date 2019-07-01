@@ -56,7 +56,6 @@ body {
       transform: rotate(-90deg); }
 
 .header {
-  background: url("../img/backgrounds/header-bg.png") 50% no-repeat, linear-gradient(45deg, #55b7ff, #7e5aff);
   background-size: cover;
   height: 100vh;
   width: 100%;
@@ -161,7 +160,10 @@ body {
 .slider__elem {
   display: flex !important;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  height: 100vh !important;
+  width: 100%;
+  justify-content: center; }
 .slider__title, .slider__desc {
   text-transform: uppercase; }
 .slider__title {

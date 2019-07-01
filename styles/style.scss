@@ -76,7 +76,7 @@ body {
 }
 
 .header {
-  background: url("../img/backgrounds/header-bg.png") 50% no-repeat, linear-gradient(45deg, $mainColorLight, $mainColorDark);
+  //background: url("../img/backgrounds/header-bg.png") 50% no-repeat, linear-gradient(45deg, $mainColorLight, $mainColorDark);
   background-size: cover;
   height: 100vh;
   width: 100%;
@@ -203,6 +203,9 @@ body {
     display: flex !important;
     flex-direction: column;
     align-items: center;
+    height: 100vh !important;
+    width: 100%;
+    justify-content: center;
   }
   &__title, &__desc {
     text-transform: uppercase;
